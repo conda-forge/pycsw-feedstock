@@ -1,4 +1,4 @@
-{% set version = "1.10.4" %}
+{% set version = "2.0.0" %}
 
 package:
     name: pycsw
@@ -7,11 +7,10 @@ package:
 source:
     fn: pycsw-{{ version }}.tar.gz
     url: https://github.com/geopython/pycsw/archive/{{ version }}.tar.gz
-    sha256: 655bd1b32f6da3cd8981443e4f1c5eb97e9637163d2c5bda7495e36d2442730c
+    sha256: 64c672bb2dfdf7fc9313d01a63bf926ef5a1d251f7a0527de9c32ed38426b83a
 
 build:
     number: 0
-    skip: True  # [py3k]
     script: python setup.py install
     preserve_egg_dir: True
 
