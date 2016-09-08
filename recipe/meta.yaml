@@ -1,4 +1,4 @@
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
     name: pycsw
@@ -7,10 +7,10 @@ package:
 source:
     fn: pycsw-{{ version }}.tar.gz
     url: https://github.com/geopython/pycsw/archive/{{ version }}.tar.gz
-    sha256: 64c672bb2dfdf7fc9313d01a63bf926ef5a1d251f7a0527de9c32ed38426b83a
+    sha256: 93caf97f09add26e23a3435e0c880fcdc8cf66c749f5306500d3e581ca748636
 
 build:
-    number: 1
+    number: 0
     script: python setup.py install
 
 requirements:
