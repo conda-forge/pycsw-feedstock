@@ -1,45 +1,45 @@
-{% set version = "2.0.1" %}
+{% set version = "2.0.2" %}
 
 package:
-    name: pycsw
-    version: {{ version }}
+  name: pycsw
+  version: {{ version }}
 
 source:
-    fn: pycsw-{{ version }}.tar.gz
-    url: https://github.com/geopython/pycsw/archive/{{ version }}.tar.gz
-    sha256: 93caf97f09add26e23a3435e0c880fcdc8cf66c749f5306500d3e581ca748636
+  fn: pycsw-{{ version }}.tar.gz
+  url: https://github.com/geopython/pycsw/archive/{{ version }}.tar.gz
+  sha256: a4cf2bcece1deab494ffbf1602c235c1413329883beb241bbec316a494806a1d
 
 build:
-    number: 0
-    script: python setup.py install
+  number: 0
+  script: python setup.py install
 
 requirements:
-    build:
-        - python
-    run:
-        - python
-        - geolinks
-        - lxml 3.6.2  # See https://github.com/geopython/pycsw/issues/454
-        - owslib
-        - pyproj
-        - shapely
-        - six
-        - xmltodict
-        # Optional.
-        - sqlalchemy
-        - psycopg2
+  build:
+    - python
+  run:
+    - python
+    - geolinks
+    - lxml 3.6.2  # See https://github.com/geopython/pycsw/issues/454
+    - owslib
+    - pyproj
+    - shapely
+    - six
+    - xmltodict
+    # Optional.
+    - sqlalchemy
+    - psycopg2
 
 test:
-    imports:
-        - pycsw
+  imports:
+    - pycsw
 
 about:
-    home: https://github.com/geopython/pycsw
-    license: MIT
-    summary: 'OGC Catalog Service for the Web (CSW) implementation in python.'
+  home: https://github.com/geopython/pycsw
+  license: MIT
+  summary: 'OGC Catalog Service for the Web (CSW) implementation in python.'
 
 extra:
-    recipe-maintainers:
-        - kalxas
-        - tomkralidis
-        - ocefpaf
+  recipe-maintainers:
+    - kalxas
+    - tomkralidis
+    - ocefpaf
