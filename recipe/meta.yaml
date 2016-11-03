@@ -10,7 +10,7 @@ source:
   sha256: a4cf2bcece1deab494ffbf1602c235c1413329883beb241bbec316a494806a1d
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install
 
 requirements:
@@ -19,7 +19,9 @@ requirements:
   run:
     - python
     - geolinks
-    - lxml 3.6.2  # See https://github.com/geopython/pycsw/issues/454
+    # https://mailman-mail5.webfaction.com/pipermail/lxml/2016-September/007759.html
+    - libxml2 2.9.3
+    - lxml
     - owslib
     - pyproj
     - shapely
