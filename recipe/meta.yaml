@@ -1,4 +1,4 @@
-{% set version = "2.0.2" %}
+{% set version = "2.0.3" %}
 
 package:
   name: pycsw
@@ -6,11 +6,11 @@ package:
 
 source:
   fn: pycsw-{{ version }}.tar.gz
-  url: https://github.com/geopython/pycsw/archive/{{ version }}.tar.gz
-  sha256: a4cf2bcece1deab494ffbf1602c235c1413329883beb241bbec316a494806a1d
+  url: https://pypi.io/packages/source/p/pycsw/pycsw-{{ version }}.tar.gz
+  sha256: 5e4456a169bcb6233b3c226f16688e6e5c5d505ad8b735b833bde9ea44c152e3
 
 build:
-  number: 2
+  number: 0
   script: python setup.py install
 
 requirements:
@@ -37,6 +37,7 @@ test:
 about:
   home: https://github.com/geopython/pycsw
   license: MIT
+  license_file: LICENSE.txt
   summary: 'OGC Catalog Service for the Web (CSW) implementation in python.'
 
 extra:
