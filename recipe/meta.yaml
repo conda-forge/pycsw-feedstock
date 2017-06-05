@@ -38,7 +38,7 @@ about:
   home: https://github.com/geopython/pycsw
   license: MIT
   license_file: LICENSE.txt
-  summary: 'OGC Catalog Service for the Web (CSW) implementation in python.'
+  summary: 'OGC Catalogue Service for the Web (CSW) server implementation written in Python.'
 
 extra:
   recipe-maintainers:
