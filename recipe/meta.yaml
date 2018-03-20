@@ -1,34 +1,32 @@
-{% set version = "2.0.3" %}
+{% set version = "2.2.0" %}
 
 package:
   name: pycsw
   version: {{ version }}
 
 source:
-  fn: pycsw-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/p/pycsw/pycsw-{{ version }}.tar.gz
-  sha256: 5e4456a169bcb6233b3c226f16688e6e5c5d505ad8b735b833bde9ea44c152e3
+  sha256: 1a3a671169451aa4314814956cb4866c934c969da6ff57c59e5d326d9c100040
 
 build:
   number: 0
-  script: python setup.py install
+  noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
+    - pip
   run:
     - python
+    - setuptools
     - geolinks
-    - libxml2 2.9.*
     - lxml
     - owslib
     - pyproj
     - shapely
     - six
     - xmltodict
-    # Optional.
-    - sqlalchemy
-    - psycopg2
 
 test:
   imports:
