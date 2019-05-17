@@ -1,4 +1,4 @@
-{% set version = "2.2.0" %}
+{% set version = "2.4.0" %}
 
 package:
   name: pycsw
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pycsw/pycsw-{{ version }}.tar.gz
-  sha256: 1a3a671169451aa4314814956cb4866c934c969da6ff57c59e5d326d9c100040
+  sha256: a15fcde5265a25a27b5eda22dc3501d41c0c402bd7eb3885cf3353278295986d
   patches:
     - avoid_tight_req.patch
 
