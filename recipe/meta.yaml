@@ -7,13 +7,11 @@ package:
 source:
   url: https://pypi.io/packages/source/p/pycsw/pycsw-{{ version }}.tar.gz
   sha256: a15fcde5265a25a27b5eda22dc3501d41c0c402bd7eb3885cf3353278295986d
-  patches:
-    - avoid_tight_req.patch
 
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
@@ -29,10 +27,24 @@ requirements:
     - shapely
     - six
     - xmltodict
+    
 
 test:
   imports:
     - pycsw
+    - pycsw.core
+    - pycsw.core.formats
+    - pycsw.ogc
+    - pycsw.ogc.csw
+    - pycsw.ogc.fes
+    - pycsw.ogc.gml
+    - pycsw.plugins
+    - pycsw.plugins.outputschemas
+    - pycsw.plugins.profiles
+    - pycsw.plugins.profiles.apiso
+    - pycsw.plugins.profiles.ebrim
+    - pycsw.plugins.repository
+    - pycsw.plugins.repository.odc
 
 about:
   home: https://github.com/geopython/pycsw
