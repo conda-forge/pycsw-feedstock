@@ -1,4 +1,4 @@
-{% set version = "2.4.0" %}
+{% set version = "2.4.1" %}
 
 package:
   name: pycsw
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pycsw/pycsw-{{ version }}.tar.gz
-  sha256: a15fcde5265a25a27b5eda22dc3501d41c0c402bd7eb3885cf3353278295986d
+  sha256: 8e89af2d0416cf952fae4f081190d5e1a56b8c4edeab5171f17eced0c6a33e6d
 
 build:
   number: 0
