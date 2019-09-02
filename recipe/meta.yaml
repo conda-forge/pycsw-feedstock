@@ -7,6 +7,8 @@ package:
 source:
   url: https://pypi.io/packages/source/p/pycsw/pycsw-{{ version }}.tar.gz
   sha256: 8e89af2d0416cf952fae4f081190d5e1a56b8c4edeab5171f17eced0c6a33e6d
+  patches:
+    - dont_use_tight_pins.patch
 
 build:
   number: 0
@@ -20,13 +22,13 @@ requirements:
   run:
     - python
     - setuptools
-    - geolinks
-    - lxml
-    - owslib
-    - pyproj
-    - shapely
+    - geolinks >=0.2,<0.3
+    - lxml >=4.4.0,<5
+    - owslib >=0.18.0
+    - pyproj >=2.2.1,<2.3
+    - shapely >=1.6.4,<1.7
+    - xmltodict >=0.12.0
     - six
-    - xmltodict
     
 
 test:

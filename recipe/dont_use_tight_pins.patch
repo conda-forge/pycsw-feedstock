@@ -1,0 +1,11 @@
+--- pycsw-2.4.1.orig/setup.py	2019-06-07 13:43:56.000000000 -0300
++++ pycsw-2.4.1/setup.py	2019-09-02 13:33:12.858044567 -0300
+@@ -74,7 +74,7 @@
+     maintainer='Tom Kralidis',
+     maintainer_email='tomkralidis@gmail.com',
+     url='https://pycsw.org/',
+-    install_requires=read("requirements.txt").splitlines(),
++    # install_requires=read("requirements.txt").splitlines(),
+     packages=find_packages(),
+     include_package_data=True,
+     # TODO: replace scripts with entry_points (needs a refactoring of pycsw-admin first)
