@@ -5,11 +5,9 @@ Home: https://github.com/geopython/pycsw
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pycsw-feedstock/blob/master/LICENSE.txt)
 
 Summary: OGC Catalogue Service for the Web (CSW) server implementation written in Python.
-
-
 
 Current build status
 ====================
