@@ -5,22 +5,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pycsw/pycsw-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/pycsw/pycsw-{{ version }}.tar.gz
   sha256: 8d4763bfc0674018f0c825b2c533352c1edef161fd76e154c5b7a3dcc44434f0
   patches:
     - dont_use_tight_pins.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - geolinks
     - lxml
     - owslib
@@ -49,6 +49,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/geopython/pycsw
